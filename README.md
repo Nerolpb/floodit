@@ -87,7 +87,7 @@ Additionally, to compile the backend and frontend, you will need:
     export FLOODIT_DATABASE_NAME=floodit
     export FLOODIT_DATABASE_USERNAME=floodit
     export FLOODIT_DATABASE_PASSWORD=mysecretpassword
-    export FLOODIT_SERVER_PORT=5000
+    export FLOODIT_SERVER_PORT=3000
     ```
 
   - Or create a local configuration file based on the provided sample:
@@ -173,13 +173,13 @@ from the repository:
 mvn spring-boot:run
 ```
 
-> The backend application runs on port 5000 by default. If that port is already
+> The backend application runs on port 3000 by default. If that port is already
 > in use, you can use the `server.port` parameter in the local configuration
 > file or the `$FLOODIT_SERVER_PORT` environment variable to switch to another
 > port, for example:
 >
 > ```bash
-> $> FLOODIT_SERVER_PORT=5001 mvn spring-boot:run
+> $> FLOODIT_SERVER_PORT=3001 mvn spring-boot:run
 > ```
 
 You can run the frontend application manually by executing the following command
@@ -206,12 +206,12 @@ npm start
 > npm start -- --host 0.0.0.0 --port 3000
 > ```
 >
-> If you have changed the backend server port to a different port than 5000 you
+> If you have changed the backend server port to a different port than 3000 you
 > should also set the `$FLOODIT_FRONTEND_API_PROXY_PORT` variable to the same
 > port number when running the frontend in development mode below, for example:
 >
 > ```bash
-> FLOODIT_FRONTEND_API_PROXY_PORT=5001 npm start -- --host 0.0.0.0 --port 3000
+> FLOODIT_FRONTEND_API_PROXY_PORT=3001 npm start -- --host 0.0.0.0 --port 3000
 > ```
 
 ## Run the application in production mode
@@ -245,7 +245,7 @@ java -jar target/floodit-1.0.0-SNAPSHOT.jar
 
 You can use your favorite web server and reverse proxy (e.g. Apache/nginx) to
 serve the frontend's files. `/api` requests should be proxied to the backend
-listening on port 5000 (or whatever port you configured).
+listening on port 3000 (or whatever port you configured).
 
 ## Updating
 
@@ -283,8 +283,8 @@ You can configure the application in one of two ways:
 | `FLOODIT_DATABASE_NAME`           | `floodit`      | The name of the PostgreSQL database.                                                     |
 | `FLOODIT_DATABASE_USERNAME`       | `floodit`      | The PostgreSQL user to connect as.                                                       |
 | `FLOODIT_DATABASE_PASSWORD`       | -              | The password of the PostgreSQL user.                                                     |
-| `FLOODIT_SERVER_PORT`             | `5000`         | The port the HTTP server listens on.                                                     |
-| `FLOODIT_FRONTEND_API_PROXY_PORT` | `5000`         | The local port the frontend will proxy API requests to when running in development mode. |
+| `FLOODIT_SERVER_PORT`             | `3000`         | The port the HTTP server listens on.                                                     |
+| `FLOODIT_FRONTEND_API_PROXY_PORT` | `3000`         | The local port the frontend will proxy API requests to when running in development mode. |
 | `FLOODIT_TEST_DATABASE_HOST`      | `localhost`    | The host at which the PostgreSQL test database can be reached.                           |
 | `FLOODIT_TEST_DATABASE_PORT`      | `5432`         | The port at which the PostgreSQL test database can be reached.                           |
 | `FLOODIT_TEST_DATABASE_NAME`      | `floodit-test` | The name of the PostgreSQL test database.                                                |

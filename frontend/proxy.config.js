@@ -1,4 +1,4 @@
-const frontendProxyPort = process.env.FLOODIT_FRONTEND_API_PROXY_PORT ?? 5000;
+const frontendProxyPort = process.env.FLOODIT_FRONTEND_API_PROXY_PORT ?? 3000;
 
 module.exports = {
   '/api/**': {
