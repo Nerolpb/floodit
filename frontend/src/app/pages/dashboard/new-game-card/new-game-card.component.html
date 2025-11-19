@@ -19,11 +19,9 @@
 
   <div class="flex justify-center px-3 pb-3 lg:px-10 lg:pb-10">
     <div class="w-full border-2 border-gray-900">
-      <app-game-board
-        *ngIf="board"
-        [board]="board"
-        [palette]="palette"
-      ></app-game-board>
+      @if (board) {
+        <app-game-board [board]="board" [palette]="palette"></app-game-board>
+      }
     </div>
   </div>
 </div>

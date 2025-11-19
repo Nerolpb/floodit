@@ -2,11 +2,9 @@
   class="grid w-full"
   [style.grid-template-columns]="'repeat(' + width + ', minmax(0, 1fr))'"
 >
-  <ng-container *ngFor="let row of boardColors">
-    <div
-      *ngFor="let color of row"
-      class="aspect-square"
-      [style.background-color]="color"
-    ></div>
-  </ng-container>
+  @for (row of boardColors; track rowIndex; let rowIndex = $index) {
+    @for (color of row; track colIndex; let colIndex = $index) {
+      <div class="aspect-square" [style.background-color]="color"></div>
+    }
+  }
 </div>

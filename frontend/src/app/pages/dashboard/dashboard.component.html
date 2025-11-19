@@ -1,43 +1,45 @@
-<section *ngIf="!(profile$ | async)">
-  <app-registration></app-registration>
-</section>
+@if (!(profile$ | async)) {
+  <section>
+    <app-registration></app-registration>
+  </section>
+}
 
-<section *ngIf="profile$ | async as profile">
-  <div class="grid lg:grid-cols-3 gap-x-5 gap-y-5">
-    <app-new-game-card
-      title="Easy"
-      description="When you like to win effortlessly."
-      cardClass="bg-success"
-      [boardWidth]="4"
-      [boardHeight]="4"
-      [numberOfColors]="8"
-      [maxMoves]="10"
-      [playerName]="profile.name"
-    ></app-new-game-card>
-
-    <app-new-game-card
-      title="Medium"
-      description="You will be challenged."
-      cardClass="bg-warning"
-      [boardWidth]="10"
-      [boardHeight]="10"
-      [numberOfColors]="8"
-      [maxMoves]="30"
-      [playerName]="profile.name"
-    ></app-new-game-card>
-
-    <app-new-game-card
-      title="Hard"
-      description="This probably isn't even possible."
-      cardClass="bg-error"
-      [boardWidth]="20"
-      [boardHeight]="20"
-      [numberOfColors]="8"
-      [maxMoves]="64"
-      [playerName]="profile.name"
-    ></app-new-game-card>
-  </div>
-</section>
+@if (profile$ | async; as profile) {
+  <section>
+    <div class="grid lg:grid-cols-3 gap-x-5 gap-y-5">
+      <app-new-game-card
+        title="Easy"
+        description="When you like to win effortlessly."
+        cardClass="bg-success"
+        [boardWidth]="4"
+        [boardHeight]="4"
+        [numberOfColors]="8"
+        [maxMoves]="10"
+        [playerName]="profile.name"
+      ></app-new-game-card>
+      <app-new-game-card
+        title="Medium"
+        description="You will be challenged."
+        cardClass="bg-warning"
+        [boardWidth]="10"
+        [boardHeight]="10"
+        [numberOfColors]="8"
+        [maxMoves]="30"
+        [playerName]="profile.name"
+      ></app-new-game-card>
+      <app-new-game-card
+        title="Hard"
+        description="This probably isn't even possible."
+        cardClass="bg-error"
+        [boardWidth]="20"
+        [boardHeight]="20"
+        [numberOfColors]="8"
+        [maxMoves]="64"
+        [playerName]="profile.name"
+      ></app-new-game-card>
+    </div>
+  </section>
+}
 
 <section class="mt-10">
   <app-previous-games></app-previous-games>
