@@ -1,7 +1,7 @@
 # Flood It
 
-[![build](https://github.com/MediaComem/floodit/actions/workflows/build.yml/badge.svg)](https://github.com/MediaComem/floodit/actions/workflows/build.yml)
-[![license](https://img.shields.io/github/license/MediaComem/floodit)](https://opensource.org/licenses/MIT)
+[![build](https://github.com/ArchiDep/floodit/actions/workflows/build.yml/badge.svg)](https://github.com/ArchiDep/floodit/actions/workflows/build.yml)
+[![license](https://img.shields.io/github/license/ArchiDep/floodit)](https://opensource.org/licenses/MIT)
 
 A web game developed with [Spring Boot][spring-boot] in [Java][java] for the
 backend and [Angular][angular] in [JavaScript][js] for the frontend.
@@ -59,7 +59,7 @@ Additionally, to compile the backend and frontend, you will need:
 - Clone the repository:
 
   ```bash
-  $> git clone https://github.com/MediaComem/floodit.git
+  $> git clone https://github.com/ArchiDep/floodit.git
   ```
 
 - Download dependencies and compile the application (_grab a coffee, this might
@@ -77,6 +77,7 @@ Additionally, to compile the backend and frontend, you will need:
   ```
 
 - You can configure the application in one of two ways:
+
   - Either set any of the [documented environment
     variables](#environment-variables), for example:
 
@@ -121,6 +122,7 @@ suite][automated-tests]:
   ```
 
 - Configure the application for testing:
+
   - Either set any of the [documented environment
     variables](#environment-variables), for example:
 
